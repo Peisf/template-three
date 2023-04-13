@@ -3,9 +3,9 @@ import * as THREE from 'three'
 
 // 引入扩展库
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
-import { earth } from '@/threejs/earth'
+import { earth } from '@/views/three/granary/threejs/earth'
 
-import { flyArcGroup, flyArr, WaveMeshArr, ConeMesh } from '@/threejs/fly'
+import { flyArcGroup, flyArr, WaveMeshArr, ConeMesh } from '@/views/three/granary/threejs/fly'
 
 // 创建场景
 export const scene = new THREE.Scene()

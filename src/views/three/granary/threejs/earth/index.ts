@@ -1,7 +1,7 @@
 // 引入threejs
 import * as THREE from 'three'
-import { countryLine } from '@/threejs/earth/lines'
-import Sprite from '@/threejs/earth/sprite'
+import { countryLine } from '@/views/three/granary/threejs/earth/lines'
+import Sprite from '@/views/three/granary/threejs/earth/sprite'
 import { ThreeEnum } from '@/enums/threeEnum'
 export const earth = new THREE.Group()
 const R = ThreeEnum.R

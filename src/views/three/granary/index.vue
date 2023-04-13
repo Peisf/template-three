@@ -6,7 +6,7 @@
 </template>
 
 <script setup lang="ts">
-import { renderer } from '@/threejs/scene'
+import { renderer } from '@/views/three/granary/threejs/scene'
 import { onMounted, ref } from 'vue'
 import Echarts from '@/views/three/granary/echarts.vue'
 import PageHeader from '@/views/three/granary/PageHeader.vue'
