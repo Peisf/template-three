@@ -16,7 +16,7 @@
         height: 50px;
         padding: 10px 20px;
       ">
-      <img src="@/assets/logo.png" alt="" style="height: 100%" />
+      <img src="@/assets/vue.svg" alt="" style="height: 100%" />
     </div>
     <!-- color: rgb(150, 205, 91); -->
     <div style="

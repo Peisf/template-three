@@ -2,22 +2,21 @@ import { AppRouteModule } from '@/router/types'
 import { LAYOUT } from '@/router/constant'
 
 const threes: AppRouteModule = {
-  path: '/scene',
+  path: '/three',
   name: 'Three',
   component: LAYOUT,
-  redirect: '/scene/jdxx',
+  redirect: '/three/granary',
   meta: {
     orderNo: 10,
     title: '粮仓'
   },
   children: [
     {
-      path: 'jdxx',
-      name: 'Jdxx',
-      component: () => import('@/views/dashboard/jdxx/index.vue'),
+      path: 'granary',
+      name: 'Granary',
+      component: () => import('@/views/three/granary/index.vue'),
       meta: {
-        orderNo: 10,
-        title: '机电学校'
+        title: 'granary'
       }
     }
   ]

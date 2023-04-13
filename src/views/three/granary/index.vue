@@ -8,8 +8,8 @@
 <script setup lang="ts">
 import { renderer } from '@/threejs/scene'
 import { onMounted, ref } from 'vue'
-import Echarts from '@/views/dashboard/demo/echarts.vue'
-import PageHeader from '@/views/dashboard/demo/PageHeader.vue'
+import Echarts from '@/views/three/granary/echarts.vue'
+import PageHeader from '@/views/three/granary/PageHeader.vue'
 
 // 将监视器添加到页面中
 const webgl = ref<HTMLBodyElement | null>(null)

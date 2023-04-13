@@ -6,12 +6,20 @@ const dashboard: AppRouteModule = {
   path: '/dashboard',
   name: 'Dashboard',
   component: LAYOUT,
-  redirect: '/dashboard/demo',
+  redirect: '/dashboard/home',
   meta: {
     orderNo: 10,
     title: t('routes.dashboard.dashboard')
   },
   children: [
+    {
+      path: 'home',
+      name: 'Home',
+      component: () => import('@/views/home.vue'),
+      meta: {
+        title: 'Home'
+      }
+    },
     {
       path: 'analysis',
       name: 'Analysis',
@@ -42,14 +50,6 @@ const dashboard: AppRouteModule = {
       component: () => import('@/views/dashboard/jdxx/index.vue'),
       meta: {
         title: ''
-      }
-    },
-    {
-      path: 'demo',
-      name: 'Demo',
-      component: () => import('@/views/dashboard/demo/index.vue'),
-      meta: {
-        title: 'demo'
       }
     }
   ]

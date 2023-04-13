@@ -58,7 +58,7 @@
         top: 395px;
         background: rgba(0, 0, 0, 0.06);
         border-radius: 10px;
-        padding: 0px 10px;
+        padding: 0 10px;
         z-index: 10;
       ">
       <!-- <div style="color:#ffffff;padding: 10px 20px;width: 360px;text-align: center;">计划完成度</div> -->
@@ -98,7 +98,7 @@
         top: 395px;
         background: rgba(0, 0, 0, 0.06);
         border-radius: 10px;
-        padding: 0px 10px;
+        padding: 0 10px;
         z-index: 10;
       ">
       <div id="echarts5" style="width: 400px;; height: 360px"></div>

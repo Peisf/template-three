@@ -1,11 +1,11 @@
-import * as echarts from 'echarts';
-export default  function() {
-  var myChart = echarts.init(document.getElementById('echarts'), 'dark');
-  var xdata = []
-  var ydata = []
-  var ydata2 = []
-  var ydata3 = []
-  for (var i = 0; i < 30; i++) {
+import * as echarts from 'echarts'
+export default function() {
+  const myChart = echarts.init(document.getElementById('echarts'), 'dark')
+  const xdata = []
+  const ydata = []
+  const ydata2 = []
+  const ydata3 = []
+  for (let i = 0; i < 30; i++) {
     xdata.push(i + 1 + '')
     ydata.push(20 * Math.random().toFixed(1) + 20)
     ydata2.push(20 * Math.random().toFixed(1) + 40)
@@ -13,7 +13,7 @@ export default  function() {
   }
 
   // 指定图表的配置项和数据
-  var option = {
+  const option = {
     // 从半透明0.1改为1.0
     backgroundColor: 'rgba(255,255,255,0.0)',
     title: {
@@ -22,26 +22,26 @@ export default  function() {
       y: 'top',
       textStyle: {
         fontSize: 16,
-        fontWeight: 'normal',
+        fontWeight: 'normal'
       }
     },
     xAxis: {
       type: 'category',
-      data: xdata,
+      data: xdata
 
     },
     yAxis: {
-      type: 'value',
+      type: 'value'
     },
     series: [{
       data: ydata,
       type: 'line',
       itemStyle: {
         normal: {
-          color: "#cefe56",
+          color: '#cefe56',
           borderWidth: 2,
           areaStyle: {
-            //渐变色的设置
+            // 渐变色的设置
             color: new echarts.graphic.LinearGradient(
               0, 0, 0, 1, [{
                 offset: 0,
@@ -56,54 +56,52 @@ export default  function() {
             )
           },
           lineStyle: {
-            color: "#cefe56",
+            color: '#cefe56',
             width: 2
           }
         }
-      },
-    },{
+      }
+    }, {
       data: ydata2,
       type: 'line',
       itemStyle: {
         normal: {
-            color: "#00ff99",
-            borderWidth: 2,
-            areaStyle: {
-                //渐变色的设置
-                color: new echarts.graphic.LinearGradient(
-                    0, 0, 0, 1, [{
-                        offset: 0,
-                        color: '#00ff99'
-                    }, {
-                        offset: 0.5,
-                        color: '#009944'
-                    }, {
-                        offset: 1,
-                        color: '#4d513a'
-                    }]
-                )
-            },
-            lineStyle: {
-                color: "#00ff99",
-                width: 2
-            }
+          color: '#00ff99',
+          borderWidth: 2,
+          areaStyle: {
+            // 渐变色的设置
+            color: new echarts.graphic.LinearGradient(
+              0, 0, 0, 1, [{
+                offset: 0,
+                color: '#00ff99'
+              }, {
+                offset: 0.5,
+                color: '#009944'
+              }, {
+                offset: 1,
+                color: '#4d513a'
+              }]
+            )
+          },
+          lineStyle: {
+            color: '#00ff99',
+            width: 2
+          }
         }
-    },
+      }
     }]
-  };
+  }
 
   // 使用刚指定的配置项和数据显示图表。
-  myChart.setOption(option);
+  myChart.setOption(option)
 }
-
-
 
 function 行程() {
   // 基于准备好的dom，初始化echarts实例
-  var myChart2 = echarts.init(document.getElementById('echarts3'), 'dark');
+  const myChart2 = echarts.init(document.getElementById('echarts3'), 'dark')
 
   // 指定图表的配置项和数据    数据结构和折线图一样，x轴一个数组  y是一个数组，y轴的数组元素和x轴数组元素一一对应
-  var option2 = {
+  const option2 = {
     backgroundColor: 'rgba(255,255,255,0.0)',
     title: {
       text: '每架飞机日行程(单位:万米)',
@@ -111,17 +109,17 @@ function 行程() {
       y: 'top',
       textStyle: {
         fontSize: 16,
-        fontWeight: 'normal',
+        fontWeight: 'normal'
       }
     },
     grid: {
-      x: '10%', //相当于距离左边效果:padding-left
-      y: '15%', //相当于距离上边效果:padding-top
-      bottom: '18%',
+      x: '10%', // 相当于距离左边效果:padding-left
+      y: '15%', // 相当于距离上边效果:padding-top
+      bottom: '18%'
       //         containLabel: true
     },
 
-    //弹出标签
+    // 弹出标签
     tooltip: {},
     xAxis: {
       // data: ["P-1", "P-2", "P-3", "P-4", "P-5", "P-6"],
@@ -133,7 +131,7 @@ function 行程() {
         },
         interval: 0,
         rotate: -60
-      },
+      }
     },
     yAxis: {
       axisLabel: {
@@ -141,7 +139,7 @@ function 行程() {
         textStyle: {
 
         }
-      },
+      }
     },
     series: [{
       // color:'#0000ff',
@@ -160,14 +158,14 @@ function 行程() {
           { type: 'average', name: '平均值' }
         ]
       }
-    }],
+    }]
 
-  };
+  }
   for (let i = 0; i < 2; i++) {
     for (let j = 0; j < 3; j++) {
-      var 粮高 = (15 * Math.random() + 20).toFixed(1);
-      var 编号 = "L-" + (i + 1) * (j + 1)
-      var 吨位 = 粮高 * 400 / 1000;
+      var 粮高 = (15 * Math.random() + 20).toFixed(1)
+      var 编号 = 'L-' + (i + 1) * (j + 1)
+      var 吨位 = 粮高 * 400 / 1000
       option2.xAxis.data.push(编号)
       option2.series[0].data.push(Math.floor(吨位))
       // myChart2.setOption(option2);
@@ -176,42 +174,32 @@ function 行程() {
 
   for (let i = 0; i < 2; i++) {
     for (let j = 0; j < 6; j++) {
-      var 编号 = "P-" + (i + 1) * (j + 1)
-      var 粮高 = (4.9 * Math.random() + 3).toFixed(1);
-      var 吨位 = 粮高 * 1000 / 1000;
+      var 编号 = 'P-' + (i + 1) * (j + 1)
+      var 粮高 = (4.9 * Math.random() + 3).toFixed(1)
+      var 吨位 = 粮高 * 1000 / 1000
       option2.xAxis.data.push(编号)
       option2.series[0].data.push(Math.floor(吨位))
       // myChart2.setOption(option2);
-
-
-
     }
   }
 
   for (let i = 0; i < 2; i++) {
     for (let j = 0; j < 3; j++) {
-
-      var 编号 = "Q-" + (i + 1) * (j + 1)
-      var 粮高 = (10.9 * Math.random() + 9).toFixed(1);
-      var 吨位 = 粮高 * 400 / 1000;
-
+      var 编号 = 'Q-' + (i + 1) * (j + 1)
+      var 粮高 = (10.9 * Math.random() + 9).toFixed(1)
+      var 吨位 = 粮高 * 400 / 1000
 
       option2.xAxis.data.push(编号)
       option2.series[0].data.push(Math.floor(吨位))
-
-
     }
   }
 
-  myChart2.setOption(option2);
+  myChart2.setOption(option2)
 }
-
-
-
 
 function 故障率() {
   // 基于准备好的dom，初始化echarts实例
-  var myChart = echarts.init(document.getElementById('echarts6'), 'dark');
+  const myChart = echarts.init(document.getElementById('echarts6'), 'dark')
 
   option = {
     backgroundColor: 'rgba(0,0,0,0.0)',
@@ -221,7 +209,7 @@ function 故障率() {
       left: 10,
       textStyle: {
         fontSize: 16,
-        fontWeight: 'normal',
+        fontWeight: 'normal'
       }
     },
     tooltip: {
@@ -245,8 +233,8 @@ function 故障率() {
       ]
     },
     series: (function () {
-      var series = [];
-      for (var i = 1; i <= 28; i++) {
+      const series = []
+      for (let i = 1; i <= 28; i++) {
         series.push({
           name: '浏览器（数据纯属虚构）',
           type: 'radar',
@@ -269,19 +257,18 @@ function 故障率() {
             ],
             name: i + 2000 + ''
           }]
-        });
+        })
       }
-      return series;
+      return series
     })()
-  };
+  }
 
   // 使用刚指定的配置项和数据显示图表。
-  myChart.setOption(option);
+  myChart.setOption(option)
 }
 
-
 function 平台() {
-  var myChart = echarts.init(document.getElementById('echarts7'), 'dark');
+  const myChart = echarts.init(document.getElementById('echarts7'), 'dark')
 
   option = {
     backgroundColor: 'rgba(255,255,255,0.0)',
@@ -289,7 +276,7 @@ function 平台() {
       text: '购票平台',
       textStyle: {
         fontSize: 16,
-        fontWeight: 'normal',
+        fontWeight: 'normal'
       }
     },
     tooltip: {
@@ -303,7 +290,7 @@ function 平台() {
     },
     legend: {
       data: ['携程', '飞猪', '穷游', '天巡', '官网'],
-      x: 'right',
+      x: 'right'
     },
     grid: {
       left: '3%',
@@ -367,7 +354,7 @@ function 平台() {
         data: [820, 932, 901, 934, 1290, 1330, 1320]
       }
     ]
-  };
+  }
   // 使用刚指定的配置项和数据显示图表。
-  myChart.setOption(option);
+  myChart.setOption(option)
 }
